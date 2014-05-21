@@ -1,7 +1,7 @@
 class RepostController < ApplicationController
   def create
     RepostUrl.all.each do |r|
-      PostToUrl.new.go({url: r.url, params: repost_params})
+      PostToUrl.perform({url: r.url, params: repost_params})
     end
   end
 

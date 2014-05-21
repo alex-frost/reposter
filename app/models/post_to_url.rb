@@ -1,5 +1,8 @@
 class PostToUrl
-  def go(attr)
-    HTTParty.post(attr[:url], attr[:params])
+  include HTTParty
+
+  def self.perform(attr)
+    base_uri attr[:url]
+    post('/', attr[:params])
   end
 end
