@@ -9,7 +9,7 @@ describe RepostController do
 
   describe "POST create" do
     it "creates a new RepostUrl" do
-      PostToUrl.should_receive(:perform)
+      PostToUrl.should_receive(:perform).once
       post :create, {:repost => heroku_data}
     end
   end
