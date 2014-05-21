@@ -5,7 +5,7 @@ feature "RePoster", type: :feature do
 
     click_on 'Add url'
 
-    fill_in :url, with: "www.example.com"
+    fill_in :Url, with: "www.example.com"
 
     post "/", heroku_data
 

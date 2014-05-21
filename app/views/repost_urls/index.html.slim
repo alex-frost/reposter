@@ -1,0 +1,21 @@
+h1 Listing repost_urls
+
+table
+  thead
+    tr
+      th Url
+      th
+      th
+      th
+
+  tbody
+    - @repost_urls.each do |repost_url|
+      tr
+        td = repost_url.url
+        td = link_to 'Show', repost_url
+        td = link_to 'Edit', edit_repost_url_path(repost_url)
+        td = link_to 'Destroy', repost_url, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Repost url', new_repost_url_path

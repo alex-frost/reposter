@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Url:
+  = @repost_url.url
+
+= link_to 'Edit', edit_repost_url_path(@repost_url)
+'|
+= link_to 'Back', repost_urls_path
