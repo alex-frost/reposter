@@ -1,5 +1,5 @@
 RePoster::Application.routes.draw do
-  post "repost/create"
+  post "/repost" => "repost#create"
   resources :repost_urls
 
   root "welcome#index"
