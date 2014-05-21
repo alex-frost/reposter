@@ -1,5 +1,4 @@
 feature "RePoster", type: :feature do
-  let(:heroku_data) { {"key" => "value" } }
   scenario "add a url and post" do
     visit "/"
 
