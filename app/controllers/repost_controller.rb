@@ -1,4 +1,6 @@
 class RepostController < ApplicationController
+  protect_from_forgery :except => [:create]
+
   def create
     logger.info "posting"
     logger.info params
