@@ -34,6 +34,8 @@ end
 
 gem 'slim-rails'
 
+gem 'httparty'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
